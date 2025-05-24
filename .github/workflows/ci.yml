@@ -1,13 +1,15 @@
-name: scan
+name: {{ ci_name }}
 
 on:
   push:
     branches:
-      - "dev"
+      - "{{ env }}"
 
 jobs:
-  container_scan:
+  {{ job_id }}:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello from dev!
-        run: echo "Hello, container_scan!"
+      - name: Hello from {{ env }}!
+        run: echo "Hello, {{ job_id }}!"
+        env:
+          SUPER_SECRET: ${{ secrets.SuperSecret }}
