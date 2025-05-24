@@ -1,0 +1,13 @@
+name: Container Scan
+
+on:
+  push:
+    branches:
+      - "dev"
+
+jobs:
+  container_scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello from dev!
+        run: echo "Hello, container_scan!"
