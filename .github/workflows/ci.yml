@@ -3,13 +3,13 @@ name: scan
 on:
   push:
     branches:
-      - "dev"
+      - "test"
 
 jobs:
   container_scan:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello from dev!
+      - name: Hello from test!
         run: echo "Hello, container_scan!"
         env:
           SUPER_SECRET: ${{ secrets.SuperSecret }}
