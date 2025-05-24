@@ -1,10 +1,13 @@
-name: Hello World
+name: Container Scan
 
-on: [push]
+on:
+  push:
+    branches:
+      - "dev"
 
 jobs:
-  say-hello:
+  container_scan:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Hello
-        run: echo "Hello, World 6!"
+      - name: Hello from dev!
+        run: echo "Hello, container_scan!"
