@@ -9,7 +9,8 @@ jobs:
   container_scan1:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello from test!
-        run: echo "Hello1, container_scan1!"
-        env:
-          SUPER_SECRET: ${{ secrets.SuperSecret }}
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Hello World
+        run: echo "Hello, World from job CONTAINER_SCAN1!"
