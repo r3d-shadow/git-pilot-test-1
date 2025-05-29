@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hello from test!
-        run: echo "Hello container_scan1!"
+        run: echo "Hello1 container_scan1!"
         env:
           SUPER_SECRET: ${{ secrets.SuperSecret }}
